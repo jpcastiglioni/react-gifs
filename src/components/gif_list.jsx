@@ -14,8 +14,9 @@ class GifList extends Component {
   // }
 
   handleClick = (event) => {
-    console.log(event.target.src);
-
+    const id = event.target.src.replace(/(.*media\/)(.*)(\/giphy.gif)/, '$2');
+    console.log(id);
+    this.props.funcChange(id);
   }
 
   render () {
